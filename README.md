@@ -1,8 +1,8 @@
-# AI vs Human Text Detection System
+# 🤖 AI vs Human Text Classification System
 
-웹 기반 AI 텍스트 판별 시스템 | AI vs Human Text Detection Web Application
+웹 기반 AI 텍스트 판별 시스템 - FastAPI + React + LoRA Fine-tuned LLM
 
-**프로젝트 개요**: 3개의 Fine-tuned LLM(Kanana 8B, Gemma 12B, Qwen3 14B)를 앙상블로 사용하여 주어진 텍스트가 AI가 생성한 것인지, 인간이 작성한 것인지를 판별하는 시스템입니다.
+**한국어 텍스트를 입력하면 AI가 생성한 것인지 인간이 작성한 것인지 판별합니다.**
 
 ---
 
