@@ -247,6 +247,11 @@ def train_lora(model, tokenizer, train_dataset, val_dataset):
         fp16=True,  # Mixed precision
         push_to_hub=False,
         report_to=["tensorboard"],
+        # Fix DataParallel multi-GPU issues - FORCE SINGLE GPU
+        local_rank=-1,  # Single GPU mode
+        ddp_find_unused_parameters=False,
+        dataloader_pin_memory=False,
+        remove_unused_columns=False,
     )
 
     print(f"\n⚙️  Training Configuration:")
