@@ -121,12 +121,9 @@ RAM: 최소 64GB
 ### 1단계: 저장소 클론
 
 ```bash
-# 자신의 개인 저장소에서 클론
 git clone https://github.com/plmjuio1234/human-ai-text-classifier.git
 cd human-ai-text-classifier
 ```
-
-> **주의**: 이 저장소는 완전히 독립적입니다. 원본 프로젝트(2025-digital-aigt-detection)를 클론할 필요가 없습니다.
 
 ### 2단계: 백엔드 설정
 
