@@ -118,33 +118,15 @@ RAM: 최소 64GB
 
 ## 🚀 설치 방법
 
-### 1단계: 저장소 클론 (2가지 방법)
+### 1단계: 저장소 클론
 
-#### 방법 1️⃣: 원본 프로젝트에서 클론 (읽기만 가능)
 ```bash
-# 원본 저장소에서 직접 클론
-git clone https://github.com/AI-IDLE/2025-digital-aigt-detection.git
-cd 2025-digital-aigt-detection
+# 자신의 개인 저장소에서 클론
+git clone https://github.com/plmjuio1234/human-ai-text-classifier.git
+cd human-ai-text-classifier
 ```
 
-#### 방법 2️⃣: 자신의 개인 저장소로 설정 (권장)
-```bash
-# 원본에서 먼저 클론
-git clone https://github.com/AI-IDLE/2025-digital-aigt-detection.git
-cd 2025-digital-aigt-detection
-
-# 원본 저장소 제거
-git remote remove origin
-
-# 자신의 개인 저장소 주소로 설정 (GitHub에서 생성 후)
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-
-# 자신의 저장소로 push
-git branch -M main
-git push -u origin main
-```
-
-> **💡 팁**: GitHub에 새 저장소를 생성한 후 위의 YOUR_USERNAME과 YOUR_REPO를 자신의 정보로 변경하세요.
+> **주의**: 이 저장소는 완전히 독립적입니다. 원본 프로젝트(2025-digital-aigt-detection)를 클론할 필요가 없습니다.
 
 ### 2단계: 백엔드 설정
 
@@ -612,12 +594,9 @@ npm install --legacy-peer-deps
 
 ## 📞 지원 및 문의
 
-- **GitHub Issues**: 자신의 개인 저장소 Issues 탭에서 문제 보고 및 기능 요청
-  - 참고: `YOUR_USERNAME` 부분을 자신의 GitHub 사용자명으로 변경하세요
-  - https://github.com/YOUR_USERNAME/YOUR_REPO/issues
+- **GitHub Issues**: https://github.com/plmjuio1234/human-ai-text-classifier/issues
 - **API Documentation**: http://localhost:8000/docs (Swagger UI - 로컬 실행 시)
 - **API 스펙**: [API_SPEC.md](API_SPEC.md)
-- **원본 프로젝트**: [AI-IDLE/2025-digital-aigt-detection](https://github.com/AI-IDLE/2025-digital-aigt-detection.git)
 
 ---
 
