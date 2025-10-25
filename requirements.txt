@@ -1,0 +1,33 @@
+# 핵심 라이브러리
+torch==2.6.0
+torchvision==0.17.0
+torchaudio==2.6.0
+
+# 트랜스포머 모델
+transformers==4.46.2
+bitsandbytes==0.43.0
+peft==0.13.2
+
+# FastAPI 백엔드
+fastapi==0.115.0
+uvicorn==0.30.0
+pydantic==2.10.0
+
+# 유틸리티
+psutil==6.0.0
+python-multipart==0.0.7
+requests==2.32.3
+python-dotenv==1.0.1
+
+# 개발 도구
+black==24.10.0
+flake8==7.1.1
+pytest==8.3.2
+pytest-asyncio==0.24.0
+
+# 데이터 처리 (배치 분석용)
+pandas==2.2.3
+openpyxl==3.11.0
+PyPDF2==4.2.0
+python-docx==0.8.11
+chardet==5.2.0

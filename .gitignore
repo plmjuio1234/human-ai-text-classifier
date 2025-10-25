@@ -1,0 +1,86 @@
+# Environment
+venv/
+env/
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Claude Code
+.claude/
+.playwright/
+.playwright-mcp/
+
+# Project specific exclusions
+2025-digital-aigt-detection/
+
+# Model weights and checkpoints (but track the directories)
+*.bin
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+
+# Large CSV data files (over GitHub's 100MB limit)
+data/original_data/train.csv
+data/original_data/test.csv
+data/original_data/sample_submission.csv
+
+# Other large data files
+data/processed/
+data/cache/
+data/kfold_csv/
+
+# Logs and outputs
+*.log
+backend/logs/
+logs/
+outputs/
+checkpoints/
+
+# Temporary files
+*.tmp
+.tmp/
+tmp/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node modules (frontend)
+frontend/node_modules/
+frontend/dist/
+
+# Test outputs
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Documentation (EXCLUDE all .md except README)
+*.md
+!README.md
+!SPEC.md
+!ARCHITECTURE.md
+!API_SPEC.md
+!FRONTEND_SPEC.md
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Environment variables
+.env
+.env.local
+.env.*.local
