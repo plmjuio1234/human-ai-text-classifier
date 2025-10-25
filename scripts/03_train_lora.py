@@ -6,7 +6,7 @@ Kanana 8B 모델을 LoRA로 fine-tuning합니다.
 
 Features:
 - LoRA (Low-Rank Adaptation) fine-tuning
-- 8-bit quantization
+- Gradient checkpointing (memory optimization)
 - Mixed precision training (fp16)
 - Gradient accumulation
 - Evaluation on validation set
@@ -30,7 +30,6 @@ from tqdm import tqdm
 from transformers import (
     AutoTokenizer,
     AutoModelForCausalLM,
-    BitsAndBytesConfig,
     TrainingArguments,
     Trainer,
     DataCollatorForLanguageModeling,
@@ -155,23 +154,19 @@ def load_model_and_tokenizer():
     print(f"  ✓ Tokenizer loaded")
     print(f"    • Vocab size: {len(tokenizer):,}")
 
-    # 8-bit 양자화 설정
-    print(f"\n⏳ Loading model with 8-bit quantization...")
-    bnb_config = BitsAndBytesConfig(
-        load_in_8bit=True,
-        bnb_4bit_use_double_quant=False,
-        bnb_4bit_quant_type="nf4",
-        bnb_4bit_compute_dtype=torch.float16,
-    )
-
+    # 모델 로드 (메모리 최적화: gradient checkpointing 사용)
+    print(f"\n⏳ Loading model with gradient checkpointing...")
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
-        quantization_config=bnb_config,
-        device_map=DEVICE,
         trust_remote_code=True,
         torch_dtype=torch.float16,
-        attn_implementation="flash_attention_2",  # 필요하면 주석 처리
     )
+
+    # GPU로 이동
+    model = model.to(DEVICE)
+
+    # Gradient checkpointing 활성화 (메모리 절약)
+    model.gradient_checkpointing_enable()
 
     print(f"  ✓ Model loaded")
     print(f"    • Parameters: {sum(p.numel() for p in model.parameters()):,}")

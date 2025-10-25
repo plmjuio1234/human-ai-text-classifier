@@ -12,8 +12,7 @@ accelerate==1.0.0
 # 모델 & 변환기 (Transformers)
 # ============================================================================
 transformers==4.46.2
-bitsandbytes==0.43.0
-peft==0.13.2              # LoRA fine-tuning용
+peft==0.13.2              # LoRA fine-tuning용 (gradient checkpointing으로 메모리 절약)
 datasets==2.21.0          # HuggingFace 데이터셋 로드
 evaluate==0.4.3           # 모델 평가 메트릭
 
