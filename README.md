@@ -469,9 +469,6 @@ nugu/
 - **Zhu et al.** "Is BERT Robust to Label Noise?" (ACL 2022)
 - **Hu et al.** "LoRA: Low-Rank Adaptation of Large Language Models" (ICLR 2022)
 
-### 대회
-- **DACON AI 텍스트 판별 대회**: https://dacon.io/competitions/official/236370/overview/description
-
 ---
 
 ## 📝 라이선스

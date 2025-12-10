@@ -16,7 +16,10 @@ backend/.env
 frontend/.env
 
 # Model files (large files)
-models/
+models/**/*
+!models/.gitkeep
+!models/lora_adapters/.gitkeep
+!models/lora_adapters/kanana/.gitkeep
 *.bin
 *.safetensors
 *.gguf
@@ -27,8 +30,8 @@ models/
 *.log
 logs/
 
-# Output files
-output/
+# Output files (keep folder structure)
+# output/ folder will be tracked
 results/
 checkpoints/
 
@@ -56,8 +59,11 @@ frontend/.vite/
 # Documentation (exclude from repo)
 docs/
 
-# Data files (large datasets)
-data/
+# Data files (large datasets - keep folder structure)
+data/**/*
+!data/.gitkeep
+!data/raw/.gitkeep
+!data/kfold_csv/.gitkeep
 *.csv
 *.tsv
 *.parquet
