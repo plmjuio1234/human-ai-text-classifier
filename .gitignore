@@ -1,0 +1,72 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Environment variables
+.env
+*.env.local
+backend/.env
+frontend/.env
+
+# Model files (large files)
+models/
+*.bin
+*.safetensors
+*.gguf
+*.pt
+*.pth
+
+# Logs
+*.log
+logs/
+
+# Output files
+output/
+results/
+checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (Frontend)
+node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Documentation (exclude from repo)
+docs/
+
+# Data files (large datasets)
+data/
+*.csv
+*.tsv
+*.parquet
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Cloudflare
+cloudflared/
+*.pem

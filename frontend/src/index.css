@@ -1,0 +1,116 @@
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/700.css';
+@import '@fontsource/outfit/300.css';
+@import '@fontsource/outfit/400.css';
+@import '@fontsource/outfit/600.css';
+@import '@fontsource/outfit/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Cyberpunk Lab Theme */
+    --background: 220 26% 6%;
+    --foreground: 180 100% 95%;
+    --card: 220 25% 9%;
+    --card-foreground: 180 100% 95%;
+    --popover: 220 25% 9%;
+    --popover-foreground: 180 100% 95%;
+    --primary: 174 72% 56%;
+    --primary-foreground: 220 26% 6%;
+    --secondary: 280 80% 60%;
+    --secondary-foreground: 220 26% 6%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 180 15% 70%;
+    --accent: 174 72% 56%;
+    --accent-foreground: 220 26% 6%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 26% 6%;
+    --border: 220 20% 18%;
+    --input: 220 20% 15%;
+    --ring: 174 72% 56%;
+    --radius: 0.75rem;
+
+    /* Custom colors */
+    --neon-cyan: 174 72% 56%;
+    --neon-purple: 280 80% 60%;
+    --highlight-high: 0 84% 60%;
+    --highlight-med: 45 100% 55%;
+    --highlight-low: 140 70% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .font-body {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px currentColor;
+  }
+
+  .scan-line {
+    background: linear-gradient(
+      0deg,
+      transparent 0%,
+      hsla(174, 72%, 56%, 0.1) 50%,
+      transparent 100%
+    );
+    animation: scan 2s linear infinite;
+  }
+
+  @keyframes scan {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  .highlight-high {
+    background: linear-gradient(90deg,
+      hsla(var(--highlight-high), 0.3) 0%,
+      hsla(var(--highlight-high), 0.2) 100%
+    );
+    border-left: 3px solid hsl(var(--highlight-high));
+    box-shadow: 0 0 15px hsla(var(--highlight-high), 0.3);
+  }
+
+  .highlight-med {
+    background: linear-gradient(90deg,
+      hsla(var(--highlight-med), 0.25) 0%,
+      hsla(var(--highlight-med), 0.15) 100%
+    );
+    border-left: 3px solid hsl(var(--highlight-med));
+    box-shadow: 0 0 12px hsla(var(--highlight-med), 0.2);
+  }
+
+  .highlight-low {
+    background: linear-gradient(90deg,
+      hsla(var(--highlight-low), 0.2) 0%,
+      hsla(var(--highlight-low), 0.1) 100%
+    );
+    border-left: 3px solid hsl(var(--highlight-low));
+    box-shadow: 0 0 10px hsla(var(--highlight-low), 0.15);
+  }
+}
