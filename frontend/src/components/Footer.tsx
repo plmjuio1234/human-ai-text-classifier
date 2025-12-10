@@ -54,7 +54,7 @@ export default function Footer() {
                 <span className="text-[hsl(174,72%,56%)]">▸</span> GPU Acceleration
               </li>
               <li>
-                <span className="text-[hsl(174,72%,56%)]">▸</span> 94.15% AUC
+                <span className="text-[hsl(174,72%,56%)]">▸</span> 94.46% AUC
               </li>
             </ul>
           </div>

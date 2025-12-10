@@ -23,7 +23,7 @@ export default function LandingPage() {
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <div className="mb-6 inline-block">
             <span className="px-4 py-2 rounded-full bg-[hsl(174,72%,56%)]/10 border border-[hsl(174,72%,56%)]/30 text-[hsl(174,72%,56%)] text-sm font-display">
-              [ KANANA-1.5-8B | AUC 94.15% ]
+              [ KANANA-1.5-8B | AUC 94.46% ]
             </span>
           </div>
 
@@ -62,7 +62,7 @@ export default function LandingPage() {
           {/* Stats Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-4xl mx-auto">
             {[
-              { value: '94.15%', label: 'ACCURACY' },
+              { value: '94.46%', label: 'ACCURACY' },
               { value: '8B', label: 'PARAMETERS' },
               { value: '<2s', label: 'ANALYSIS' },
               { value: '∞', label: 'PARAGRAPHS' },
